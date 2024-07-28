@@ -21,7 +21,7 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#work" class="nav__link">Works</a></li>
           <li class="nav__item"><a href="#research" class="nav__link">Research</a></li>
           <li class="nav__item">
@@ -50,28 +50,260 @@
 
   <main role="main">
 
-                                  <!-- ********************** Skills ********************** -->
+                                  <!-- ********************** projects ********************** -->
 
-    <section class="skills" id="skills">
+    <section class="projects" id="projects">
       <div class="row">
-        <h2>Skills</h2>
-        <div class="skill_column">
-          <ul>
-            <li>Machine Learning</li>
-            <li>Advance Power BI</li>
-            <li></li>
-            <li>HTML, PHP</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
-        <div class="skill_column">
-          <ul>
-            <li>Deep Learning</li>
-            <li>Computer Vision</li>
-            <li>Natural Language Processing</li>
-            <li>Blender 3D</li>
-            <li>Wordpress Wesite Build</li>
-          </ul>
+        <h2>Projects</h2>
+        <p>
+          My four-year undergraduate degree provided a strong foundation in computer science, 
+          enabling me to develop a diverse skill set encompassing web and software development, 
+          as well as advanced areas such as machine learning, deep learning, computer vision, 
+          and natural language processing. A comprehensive portfolio of these projects is 
+          available on my GitHub account.
+        </p>
+        <div class="projects__list">
+
+          <!-- **** project1 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE439_img.png" alt="CSE439 Project" class="project__image">
+            <div class="project__details">
+              <h3>Detecting Small Vessels or Boats with Satellite Imagray using DDPM and YOLOv7</h3>
+              <p>
+                In our project, we tackled the challenge of detecting ships from Synthetic Aperture Radar (SAR)
+                images using the YOLOv7 model. SAR images are often plagued by significant noise.
+                To mitigate this, we applied noise reduction techniques
+                such as Denoising Diffusion Probabilistic Models (DDPM) and anisotropic diffusion, which significantly
+                enhanced image quality. Our model was trained on SSDD, DS SDD, and FUSAR datasets and 
+                demonstrated high accuracy in ship detection.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE439-Machine-Vision-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project2 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE442_img.png" alt="CSE442 Project" class="project__image">
+            <div class="project__details">
+              <h3>Content recommendation system based facial expression recognition with on Swin transformer and Haar Cascade</h3>
+              <p>This project investigates facial expression recognition using Swin Transformer models (Swin-S, Swin-M, Swin-B). 
+                The system initially employs Haar Cascade for face detection, followed by Swin Transformer-based classification 
+                on datasets like RAF-DB, CK+, and FER2013.</p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE442-NLP-driven-UI-UX-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- ****** project3 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE422_img.png" alt="CSE422 Project" class="project__image">
+            <div class="project__details">
+              <h3>FIFA22 Position Prediction</h3>
+              <p>This project aims to predict player positions in FIFA 23 by employing various data preprocessing 
+                techniques such as normalization, scaling, feature engineering, and handling missing values on a 
+                Kaggle dataset. Several machine learning models including Random Forest, Support Vector Machines, 
+                and Neural Networks were compared to optimize player position prediction accuracy.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE422-Artificial-Intelligence-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- ****** project4 ******* -->
+          <div class="project__item">
+            <img src="./images/" alt="CSE470 Project" class="project__image">
+            <div class="project__details">
+              <h3>University ChatBot</h3>
+              <p></p>
+            </div>
+            <div class="work__links">
+              <a href="" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project5 ******* -->
+          <div class="project__item">
+            <img src="./images/" alt="ML project" class="project__image">
+            <div class="project__details">
+              <h3>Trip Advisor Hotel Review Data Analysis</h3>
+              <p></p>
+            </div>
+            <div class="work__links">
+              <a href="" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+          
+          <!-- **** project6 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE423_img.png" alt="CSE423 Project" class="project__image">
+            <div class="project__details">
+              <h3>Mr. Silly Snake</h3>
+              <p>Mr. Silly Snake is a classic snake game developed using OpenGL and Pygame. 
+                The game employs the midpoint line algorithm to construct the game border, snake body, 
+                and interactive buttons. Randomly generated gems, visualized using the circle 
+                drawing algorithm, serve as rewards for the player. Incorporating AABB collision 
+                detection for obstacles and the snake body enhances gameplay. Players navigate the 
+                snake using arrow keys and interact with game elements through mouse clicks, while 
+                the score is displayed on the terminal for real-time tracking.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE423-Computer-Graphics-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project7 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE428_img.png" alt="CSE428 Project" class="project__image">
+            <div class="project__details">
+              <h3>ResNet-34 Object Detection (Build From Scratch)</h3>
+              <p>This project explores the development of object detection models using ResNet-34, 
+                ApexNet, InceptionNet, and GoogleNet architectures build from scratch on a specified 
+                image dataset utilizing TensorFlow. The objective is to evaluate the performance of these 
+                models in detecting objects within images without relying on pre-trained weights.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE428-Image-Processing-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project8 ******* -->
+          <div class="project__item">
+            <img src="./images/bc_img.png" alt="Breast Cancer" class="project__image">
+            <div class="project__details">
+              <h3>Breast Cancer Survival Analysis and Prediction</h3>
+              <p>This project investigated the potential of machine learning for breast cancer analysis 
+                and prediction. By exploring various models like SVM, Logistic Regression, KNN, and 
+                Random Forest on a preprocessed dataset, the project aimed to identify the most effective approach. 
+                While all models achieved decent accuracy, SVM stood out with a superior F1 score, indicating 
+                its better ability to balance precision and recall. The analysis highlights the potential of 
+                machine learning in breast cancer diagnosis, with further research focusing on refining model 
+                performance and incorporating additional data sources.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/Breast-Cancer-Survival-Analysis-and-Prediction" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project9 ******* -->
+          <div class="project__item">
+            <img src="./images/ps_img.png" alt="Protein Sequence" class="project__image">
+            <div class="project__details">
+              <h3>Protein Sequence Classification Project</h3>
+              <p>
+                This research investigates the prediction and classification of protein sequences 
+                using a dataset encompassing diverse protein information. A comprehensive approach was employed, 
+                incorporating various preprocessing techniques to prepare the data effectively. Multiple machine 
+                learning models were then applied and compared to determine the most suitable method for accurately 
+                predicting and categorizing protein sequences based on their underlying characteristics.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/Protein-Sequence-Classification-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project10 ******* -->
+          <div class="project__item">
+            <img src="./images/sp_img.jpg" alt="Stock Prediction Project" class="project__image">
+            <div class="project__details">
+              <h3>Stock Prediction Project</h3>
+              <p>This project explores the potential of machine learning for stock price prediction using 
+                the S&P 300 index as a dataset. Random Forest, Logistic Regression, and Support Vector Machine 
+                models were implemented and compared to forecast future stock prices. The project encompasses 
+                data collection, preprocessing, feature engineering, model training, evaluation, and visualization. 
+                While offering a foundational approach to stock prediction, it serves as a starting point for more 
+                complex models and strategies.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE427-ML-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project11 ******* -->
+          <div class="project__item">
+            <img src="./images/CSE370_img.png" alt="Fitness Website" class="project__image">
+            <div class="project__details">
+              <h3>Fitness Tracking Website</h3>
+              <p>This fitness tracking website empowers users to take control of their health and wellness by providing a 
+                comprehensive platform for monitoring physical activity, nutrition, and overall progress. 
+                With features including personalized workout plans, social interaction, and integration with 
+                wearable devices, this application aims to motivate and support individuals in achieving their fitness goals.
+                The website is made with PHP, MySQL (XAMPP), HTML and CSS 
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/CSE370-MySQL-Project/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- **** project12 ******* -->
+          <div class="project__item">
+            <img src="./images/hs_img.png" alt="Household Service" class="project__image">
+            <div class="project__details">
+              <h3>Household Service Platform</h3>
+              <p>This platform offers a comprehensive solution for managing household chores and maintenance. 
+                Users can easily book a variety of services, from cleaning and repairs to gardening and pest 
+                control, through detailed service provider profiles and a user-friendly booking system. Built 
+                with PHP, MySQL (XAMPP), HTML, and CSS, the platform ensures a seamless experience for both 
+                service seekers and providers.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/Household-Service-Website/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+          <!-- ****** project13 ******* -->
+          <div class="project__item">
+            <img src="./images/my_website.png" alt="My website" class="project__image">
+            <div class="project__details">
+              <h3>Github Portfolio Website</h3>
+              <p>I've constructed a dynamic online portfolio showcasing my web development abilities. 
+                Leveraging HTML, CSS, JavaScript, and PHP, I've crafted a responsive and interactive 
+                platform hosted on GitHub. This digital showcase effectively highlights my skills and 
+                projects, providing a comprehensive overview of my professional capabilities.
+              </p>
+            </div>
+            <div class="work__links">
+              <a href="https://github.com/kazimahathir73/kazimahathir73.github.io/" title="View Source Code" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
@@ -80,22 +312,33 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>All my works</h2>
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Projects</h3>
-              <p>
-                My four-year undergraduate degree provided a strong foundation in computer science, 
-                enabling me to develop a diverse skill set encompassing web and software development, 
-                as well as advanced areas such as machine learning, deep learning, computer vision, 
-                and natural language processing. A comprehensive portfolio of these projects is 
-                available on my GitHub account.
-              </p>
-              <a href="#">
-                <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-              </a>
+        <h2>Works</h2>
+        <div class="work__box">
+          <div class="work__text">
+            <h3>Skills</h3>
+            <div class="skill_columns">
+              <div class="skill_column">
+                <ul>
+                  <li>Machine Learning</li>
+                  <li>Advance Power BI</li>
+                  <li>React, Django, MongoDB</li>
+                  <li>HTML, PHP</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+              <div class="skill_column">
+                <ul>
+                  <li>Deep Learning</li>
+                  <li>Computer Vision</li>
+                  <li>Natural Language Processing</li>
+                  <li>Blender 3D</li>
+                  <li>Wordpress Website Build</li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+
           
           <div class="work__box">
             <div class="work__text">
@@ -115,15 +358,16 @@
             </div>
           </div>
 
-          <div class="work__box">
+          <div class="work__coding">
             <div class="work__text">
               <h3>Coding Contest</h3>
               <p>
                 Concurrently with my undergraduate studies, I cultivated a strong foundation in programming.
                 This early exposure fostered a keen interest in problem-solving and algorithmic thinking. This 
                 helps me to imoprove my <b>Data Structure</b> and <b>Algorithmic</b> knowledges. My profile in different website
-                is given below. 
+                is given below.
               </p>
+
               <div class="work__links">
 
                 <a href="https://leetcode.com/u/mahathirmahim73/" class="link__text">
@@ -136,6 +380,9 @@
                   Github
                 </a>
               </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/my_img2.jpg" class="work__image" alt="Programming contest 2023" />
             </div>
           </div>
       </div>
