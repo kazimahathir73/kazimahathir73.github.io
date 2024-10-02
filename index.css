@@ -547,19 +547,6 @@ margin-top: 30px;
     margin-bottom: var(--gutter-normal);
 }
 
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
-    }
-}
-
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
-}
-
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
