@@ -110,10 +110,20 @@ section {
     border-bottom: var(--border-light);
 }
 
+
 img {
-    object-fit: contain;
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
 }
+
+.btn {
+  font-size: 1.4rem;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 
 /* --------------------------------------- */
 /* ----- Headlines and Paragraphs ----- */
@@ -351,24 +361,6 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: var(--gutter-medium);
 }
 
-@media(max-width: 500px) {
-    .nav {
-        justify-content: center;
-    }
-}
-
-@media(max-width: 400px) {
-    .nav__item:not(:last-child) {
-        margin-right: var(--gutter-normal);
-    }
-}
-
-@media(max-width: 300px) {
-    .nav {
-        font-size: var(--font-size-small);
-    }
-}
-
 .nav__link {
     position: relative;
     display: inline-block;
@@ -400,6 +392,25 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
+@media (max-width: 768px) {
+    .nav__items {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .nav {
+      justify-content: center;
+      font-size: var(--font-size-small);
+    }
+
+    .nav__item:not(:last-child) {
+        margin-right: var(--gutter-normal);
+    }
+
+  }
+  
+
 /* --------------------------------------- */
 /* ----- Header ----- */
 /* --------------------------------------- */
@@ -427,15 +438,22 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-medium);
 }
 
-@media(max-width: 500px) {
+@media (max-width: 600px) {
     .header {
         text-align: center;
     }
 
-    .header__text p {
-        transform: scale(.8);
+    .header__text {
+      text-align: center;
+      padding: 0 2rem;
     }
-}
+  
+    .header__text p {
+      font-size: 2rem;
+      max-width: 100%;
+    }
+  }
+  
 
 
 /* --------------------------------------- */
@@ -454,7 +472,14 @@ body:not(.user-is-tabbing) a:focus {
     margin: 20px 40px;
 }
 
+@media (max-width: 768px) {
+    .skill_columns {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
 
+}
 /* --------------------------------------- */
 /* ----- Certificates ----- */
 /* --------------------------------------- */
@@ -477,7 +502,15 @@ margin-top: 30px;
     height: 300px;
     border-radius: 10px;
     object-fit: cover;
-  }
+}
+
+@media (max-width: 768px) {
+    .certificate_row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -551,6 +584,18 @@ margin-top: 30px;
     width: 40%;
 }
 
+@media (max-width: 768px) {
+  
+    .work__box {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .work__image-box {
+      width: 100%;
+    }
+  }
+
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
@@ -587,12 +632,12 @@ margin-top: 30px;
 /* ----- Projects ----- */
 /* --------------------------------------- */
 
-  .projects__list {
+.projects__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
-  .project__item {
+.project__item {
     background-color: #3a3a3a;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -601,30 +646,35 @@ margin-top: 30px;
     margin-bottom: 20px;
     margin-top: 40px;
   }
-  .project__image {
+.project__image {
     width: auto;
     height: auto;
   }
-  .project__details {
+.project__details {
     font-size: 1.35rem;
     padding: 15px;
   }
-  .project__details h3 {
+.project__details h3 {
     font-size: 2.2rem;
     margin-top: 0;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 1000px) {
-    .project__item {
-      width: calc(50% - 20px); /* Adjust to fit 2 items per row */
+
+@media (max-width: 768px) {
+    .project__details h3 {
+      font-size: 1.8rem;
     }
-  }
-  @media (max-width: 600px) {
     .project__item {
-      width: 100%; /* Adjust to fit 1 item per row */
+        width: calc(50% - 20px);
+      }
+    .project__item {
+        width: 100%;
+      }
+    .project__details p {
+      font-size: 1.3rem;
     }
-  }
+}
+  
 
 
 /* --------------------------------------- */
