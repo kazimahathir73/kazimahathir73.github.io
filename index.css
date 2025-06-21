@@ -342,6 +342,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+  
 /* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
@@ -685,6 +686,23 @@ margin-top: 30px;
     }
 }
   
+/* --------------------------------------- */
+/* ----- Research ----- */
+/* --------------------------------------- */
+
+.research_content {
+    flex: 1;
+}
+
+.research_content h3 {
+    margin: 0;
+    font-size: var(--font-size-medium);
+}
+
+.doi {
+    margin-top: 4px;
+    font-size: var(--font-size-normal);
+}
 
 
 /* --------------------------------------- */
@@ -731,10 +749,6 @@ margin-top: 30px;
     border-radius: 5px;
     object-fit: contain;
 }
-
-/* --------------------------------------- */
-/* ----- Contact ----- */
-/* --------------------------------------- */
 
 .contact__info {
     max-width: var(--container-medium-width);
