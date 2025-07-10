@@ -590,8 +590,11 @@
     <section class="research" id="research">
       <div class="row">
         <h2>Research</h2>
+        <div class="work__box">
+
+          <!-- *********** TextDiffuser RL ********* -->
           <div class="research_item card">
-            <div class="AntonRX">
+            <div class="research">
               <a href="https://arxiv.org/abs/2505.19291" title="link" target="_blank">
                 <img src="./images/arxiv.png" class="company_image" alt="arxiv">
               </a>
@@ -610,7 +613,30 @@
               </p>
             </div>
           </div>
-
+          
+          <!-- *********** Speak2Sign3D ********* -->
+          <div class="research_item card">
+            <div class="research">
+              <a href="https://arxiv.org/abs/2507.06530" title="link" target="_blank">
+                <img src="./images/arxiv.png" class="company_image" alt="arxiv">
+              </a>
+            </div>
+            <div class="research_content">
+              <h3>Speak2Sign3D: A Multi-modal Pipeline for English Speech to American Sign Language Animation</h3>
+              <p class="description">
+              We present a complete pipeline that converts spoken English into smooth, realistic 3D American Sign Language (ASL) animations.
+              Our system uses Whisper for speech-to-text conversion, MarianMT for translating text into ASL gloss, and word embeddings like Word2Vec 
+              and FastText to improve translation quality. The gloss is animated using a 3D keypoint-based motion system trained on <b>Sign3D-WLASL</b>, a 
+              dataset we built from WLASL videos. We also introduce BookGlossCorpus-CG, which maps English sentences to ASL gloss using grammar rules. 
+              Interpolation ensures smooth motion, creating a unified framework from audio to animation for accessible communication.
+              </p>
+              <p class="doi">
+              DOI: <a href="https://doi.org/10.48550/arXiv.2507.06530" target="_blank">https://doi.org/10.48550/arXiv.2507.06530</a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
       </div>
     </section>
                                       <!-- ********************* About ***************************** -->
