@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #23a22c;
+    --green: #23a22c;
     --white: #f0e9f2;
     --white-1: #ffffffda;
 
@@ -160,7 +160,7 @@ h2::after {
     display: block;
     height: 2px;
     width: 10rem;
-    background: var(--pink);
+    background: var(--green);
     margin: var(--gutter-small) 0;
 }
 
@@ -211,7 +211,7 @@ a {
 
 button:focus,
 a:focus {
-    outline: 2px solid var(--pink);
+    outline: 2px solid var(--green);
 }
 
 body:not(.user-is-tabbing) button:focus,
@@ -220,7 +220,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--pink);
+    color: var(--green);
 }
 
 .btn {
@@ -229,7 +229,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid  var(--green);
     font-weight: 400;
 }
 
@@ -253,20 +253,20 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--pink);
+    background: var(--green);
 }
 
-.btn--pink {
-    background: var(--pink);
+.btn--green {
+    background: var(--green);
     transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--green::after {
     display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--green:hover,
+.btn--green:focus {
     background: transparent;
 }
 
@@ -276,7 +276,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: .6rem;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid var(--green);
     margin-right: 30px;
 }
 
@@ -300,7 +300,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--pink);
+    background: var(--green);
 }
 
 .link__text span {
@@ -319,7 +319,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--pink);
+    background-color: var(--green);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -384,13 +384,13 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--pink);
+    color: var(--green);
 }
 
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--pink);
+    background: var(--green);
 }
 
 @media (max-width: 768px) {
@@ -502,10 +502,10 @@ flex-direction: column;
 }
 
 .certificate_row {
-display: flex;
-justify-content: space-between;
-margin-bottom: 30px;
-margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .certificate_row img {
@@ -513,7 +513,14 @@ margin-top: 30px;
     height: 300px;
     border-radius: 10px;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.certificate_row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
 
 @media (max-width: 768px) {
     .certificate_row {
@@ -579,15 +586,18 @@ margin-top: 30px;
     margin-bottom: var(--gutter-normal);
 }
 
+
 .work__code {
     display: block;
     height: 3rem;
     margin-left: var(--gutter-normal);
+    font-size: 30px;
     transition: all .3s;
 }
 
 .work__code:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
+    color: var(--green);
 }
 
 .work__image-box {
@@ -743,12 +753,19 @@ margin-top: 30px;
     font-size: 1.5rem;
 }
 
-.company_image img {
-    width: 80px;
+.company_image {
+    width: 300px;
     height: auto;
     border-radius: 5px;
     object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.company_image:hover {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 .contact__info {
     max-width: var(--container-medium-width);
@@ -792,4 +809,24 @@ margin-top: 30px;
     .footer {
         padding: var(--gutter-medium) 0;
     } 
+}
+
+/* --------------------------------------- */
+/* ----- Links ----- */
+/* --------------------------------------- */
+
+.social_links {
+  display: flex;
+  gap: 30px;
+}
+
+.social_links a {
+  font-size: 40px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social_links a:hover {
+  transform: scale(0.88);
+  color: var(--green);
 }
