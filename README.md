@@ -22,5 +22,3 @@ This repository contains the source code for my professional portfolio website, 
 - **JavaScript**
 - **Bootstrap 5**
 
-## Folder Structure
-
