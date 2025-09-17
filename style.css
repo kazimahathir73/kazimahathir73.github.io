@@ -373,9 +373,22 @@ a:hover{
     color: var(--muted-text);
 }
 
+.hero-portrait .pic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45vw;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url(./assets/images/my_img2.png);
+}
+
 @media (max-width: 576px) {
     #hero {
         padding: 35px 0px 0px 0px;
+        min-height: 100vh;
     }
 
     .hero-portrait {
