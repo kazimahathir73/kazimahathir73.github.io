@@ -332,7 +332,7 @@ a:hover{
 
 #hero {
     position: relative;
-    padding: 70px 0px 50px 0px;
+    padding: 150px 0px 50px 0px;
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 5px rgba(172, 172, 172, 0.1);
 }
