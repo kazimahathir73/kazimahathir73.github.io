@@ -855,3 +855,68 @@ a:hover{
     color: var(--primary-color);
     transform: translate(0, -0.25rem) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
 }
+
+
+
+
+/*--------------------------------------------------------------
+# Responsive Enhancements (Global)
+--------------------------------------------------------------*/
+
+/* Large devices (≤1200px) */
+@media (max-width: 1200px) {
+    #hero, #experience, #skills, #projects, #research, #about, #contact, #footer {
+        padding: 50px 0;
+    }
+    .section-heading { font-size: 1.8rem; }
+    .project-card, .article-card { margin-bottom: 20px; }
+}
+
+/* Medium devices (≤992px) */
+@media (max-width: 992px) {
+    #hero { padding: 100px 0 40px; text-align: center; }
+    .hero-portrait .pic { width: 60vw; position: relative; margin: 0 auto; }
+    #experience .experience-title { font-size: 1.6rem; }
+    .skill { padding: 15px; }
+    .skill-name { font-size: 15px; }
+    .project-card .title { font-size: 20px; }
+    .article-card .card-title { font-size: 18px; }
+    #about .bio { font-size: 15px; text-align: center; }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+    #header .navbar { padding: 10px 0; }
+    .navbar-nav > li > .nav-link { font-size: 14px; }
+    #hero { padding: 80px 0 30px; }
+    .hero-content { margin-top: 20px; }
+    #experience, #skills, #projects, #research, #about, #contact {
+        padding: 40px 0;
+    }
+    .experience-title { font-size: 1.5rem; }
+    .project-card .description { font-size: 13px; }
+    .article-card .card-text { font-size: 13px; }
+    .about-portrait .pic { width: 85%; }
+    .contact-form input, .contact-form textarea { width: 100%; }
+}
+
+/* Small devices (≤576px) */
+@media (max-width: 576px) {
+    #header { text-align: center; }
+    .logo-name { font-size: 1rem; }
+    #hero { padding: 35px 0 0; min-height: 100vh; }
+    .hero-content { margin-top: 25px; }
+    .hero-portrait .pic { width: 100%; height: auto; }
+    .section-heading { font-size: 1.5rem; text-align: center; }
+    .experience-title { font-size: 1.3rem; }
+    .skill-image { width: 55px; }
+    .skill-name { font-size: 13px; }
+    .project-card .title { font-size: 18px; }
+    .project-card .description { font-size: 12px; }
+    .article-card .card-title { font-size: 16px; }
+    .article-card .card-text { font-size: 12px; }
+    #about .bio { font-size: 13px; padding: 20px 10px; }
+    .contact-form .btn { width: 100%; }
+    #footer .copyright-text { font-size: 12px; }
+    #backToTopButton { right: 8px; bottom: 8px; }
+}
