@@ -101,7 +101,7 @@ a:hover{
     color: var(--primary-color);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .social-icons a {
         font-size: 20px;
         margin-right: 10px;
