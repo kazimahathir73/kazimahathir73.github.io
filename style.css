@@ -89,7 +89,7 @@ a:hover{
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
 }
 
-.social-icons a{
+.social-icons a {
     color: var(--text-color);
     font-size: 30px;
     margin-right: 12px;
@@ -97,8 +97,15 @@ a:hover{
     -webkit-transition: var(--transition-default);
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 10px;
+    }
 }
 
 .logo-name{
@@ -583,6 +590,26 @@ a:hover{
     font-weight: 700;
 }
 
+.card-title.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.stacks {
+    font-size: 1.1rem;
+}
+
+.description-container {
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+
+.description-container .description {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
 
 /*--------------------------------------------------------------
 # Projects Section
