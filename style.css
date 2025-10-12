@@ -103,8 +103,8 @@ a:hover{
 
 @media (max-width: 767px) {
     .social-icons a {
-        font-size: 20px;
-        margin-right: 10px;
+        font-size: 15px;
+        margin-right: 5px;
     }
 }
 
