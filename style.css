@@ -89,23 +89,16 @@ a:hover{
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
 }
 
-.social-icons a {
+.social-icons a i {
     color: var(--text-color);
-    font-size: 30px;
+    font-size: clamp(15px, 3vw, 35px);
     margin-right: 12px;
     transition: var(--transition-default);
     -webkit-transition: var(--transition-default);
 }
 
-.social-icons a:hover {
+.social-icons a i:hover {
     color: var(--primary-color);
-}
-
-@media (max-width: 767px) {
-    .social-icons a {
-        font-size: 15px;
-        margin-right: 5px;
-    }
 }
 
 .logo-name{
@@ -916,6 +909,7 @@ a:hover{
     .article-card .card-text { font-size: 13px; }
     .about-portrait .pic { width: 85%; }
     .contact-form input, .contact-form textarea { width: 100%; }
+    .social-icons a { font-size: 15px; }
 }
 
 /* Small devices (≤576px) */
@@ -937,4 +931,5 @@ a:hover{
     .contact-form .btn { width: 100%; }
     #footer .copyright-text { font-size: 12px; }
     #backToTopButton { right: 8px; bottom: 8px; }
+    .social-icons a { font-size: 15px; }
 }
