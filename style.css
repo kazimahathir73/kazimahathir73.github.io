@@ -382,7 +382,7 @@ a:hover{
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-image: url(./assets/images/my_img2.png);
+    background-image: url(./assets/images/my_img.png);
 }
 
 @media (max-width: 576px) {
