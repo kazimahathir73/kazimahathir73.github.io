@@ -29,6 +29,7 @@
 body {
     font-family: var(--font-family);
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 a {
@@ -402,25 +403,37 @@ a:hover {
 
     .hero-portrait {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         width: 100%;
-        max-width: 170px;
-        height: 170px;
-        max-height: 170px;
+        max-width: 280px;
         margin: 0 auto;
-        border: solid 3px transparent;
-        border-radius: 50%;
-        background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color), var(--secondary-color));
-        ;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
     }
 
     .hero-portrait .pic {
+        position: relative;
         width: 100%;
-        background-size: cover;
-        background-position: center;
+        height: 280px;
+        background-size: contain;
+        background-position: center bottom;
         background-repeat: no-repeat;
+        background-image: url(./assets/images/my_img.png);
+    }
+
+    .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        /* allow wrap if absolutely necessary, but try to fit */
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .hero-badges .btn-showcase {
+        font-size: 10px !important;
+        padding: 6px 10px !important;
+        margin: 4px 2px !important;
+        white-space: nowrap;
     }
 
     .hero-content {
@@ -437,16 +450,19 @@ a:hover {
 
     #hero .btn-showcase {
         font-size: 11px;
-        padding: 6px 12px;
-        margin: 5px 3px;
+        padding: 8px 14px;
+        margin: 6px 4px;
         display: inline-block;
         white-space: nowrap;
+        min-height: 44px;
     }
 
     #hero .tagline {
         font-size: 14px;
         letter-spacing: 1.2px;
         text-align: center;
+        line-height: 1.6;
+        padding: 0 10px;
     }
 
     #hero .social-icons {
@@ -454,17 +470,23 @@ a:hover {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 12px;
+        padding: 15px 0;
     }
 
     #hero .social-icons a {
         font-size: 14px;
         padding: 0px;
         margin: 0px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #hero .social-icons a i {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-right: 0px;
     }
 
@@ -473,18 +495,25 @@ a:hover {
         justify-content: center;
     }
 
-    /* Experience Section Mobile Fix */
+    #hero .call-to-action button {
+        padding: 12px 24px;
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    /* Experience Section Mobile Fix - Stacked layout */
     #experience .col-2,
     #experience .col-7,
     #experience .col-3 {
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     #experience .card-body .d-flex {
         flex-direction: column;
+        align-items: center;
     }
 
     #experience .icon {
@@ -493,7 +522,122 @@ a:hover {
     }
 
     #experience .align-middle {
-        margin-top: 10px;
+        margin-top: 8px;
+    }
+
+    #experience .card-title {
+        font-size: 1.2rem !important;
+    }
+
+    #experience .stacks {
+        font-size: 0.9rem !important;
+    }
+
+    #experience .description {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    /* Skills Section Mobile */
+    .skill {
+        padding: 12px;
+        min-height: 90px;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .skill-name {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    /* Certificates Mobile */
+    .certificate {
+        padding: 8px;
+    }
+
+    .certificate img {
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    /* Projects Section Mobile */
+    .project-card {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .project-card .banner-container {
+        height: 140px;
+    }
+
+    .project-card .banner {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-card .card-body {
+        padding: 15px 10px;
+    }
+
+    .project-card .title {
+        font-size: 1.1rem;
+    }
+
+    .project-card .description {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .project-card .primary-bg-btn {
+        padding: 10px 18px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Article Card Mobile */
+    .article-card {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .article-card .banner-container {
+        height: 140px;
+    }
+
+    .article-card .card-body {
+        padding: 15px 10px;
+    }
+
+    .article-card .title {
+        font-size: 1rem;
+    }
+
+    /* Navigation Mobile Improvements */
+    .nav-link {
+        padding: 12px 16px !important;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Section Headings Mobile */
+    .section-heading {
+        font-size: 2rem;
+        margin: 12px 0;
+    }
+
+    h6 .theme-button {
+        font-size: 12px;
+        padding: 8px 16px;
     }
 }
 
@@ -606,6 +750,13 @@ a:hover {
     -webkit-backdrop-filter: blur(300px);
     box-shadow: 0 0 1px 0 #1c8308, 0 0 0.5px 0.5px #1c8308;
     -webkit-box-shadow: 0 0 1px 0 #1c8308, 0 0 0.5px 0.5px #1c8308;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(18, 167, 51, 0.3);
 }
 
 .skill-image {
@@ -621,6 +772,30 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Certificates Section
+--------------------------------------------------------------*/
+.certificate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.certificate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(18, 167, 51, 0.25);
+}
+
+.certificate img {
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+}
+
+.certificate:hover img {
+    transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
 # Experience Section
 --------------------------------------------------------------*/
 #experience {
@@ -630,16 +805,16 @@ a:hover {
     box-shadow: 0 5px 5px rgba(172, 172, 172, 0.1);
 }
 
-.experience-logo {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-}
-
 .experience-title {
     font-size: 2rem;
     font-weight: 700;
+}
+
+#experience .primary-bg-btn:hover {
+    color: var(--btn-color);
+    background-color: var(--primary-color);
+    border: none;
+    transform: none;
 }
 
 .description-container {
@@ -652,6 +827,128 @@ a:hover {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-color);
+}
+
+/* Experience Card New Layout */
+.experience-card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(18, 167, 51, 0.2);
+}
+
+.experience-logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 12px 0;
+}
+
+.experience-logo-center a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+}
+
+.experience-logo-center a:hover {
+    transform: scale(1.05);
+}
+
+.experience-logo-center img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.experience-title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.experience-title-row .card-title {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.experience-title-row .experience-company {
+    font-size: 0.95rem;
+}
+
+.experience-meta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.experience-badge {
+    display: flex;
+    justify-content: center;
+}
+
+.experience-badge .primary-bg-btn {
+    pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .experience-logo-center {
+        padding: 12px 0 10px 0;
+    }
+
+    .experience-logo-center a {
+        width: 70px;
+        height: 70px;
+    }
+
+    .experience-content {
+        padding: 0 8px;
+    }
+
+    .experience-title-row {
+        margin-bottom: 6px;
+    }
+
+    .experience-title-row .card-title {
+        font-size: 1.1rem;
+    }
+
+    .experience-title-row .experience-company {
+        font-size: 0.9rem;
+    }
+
+    .experience-date {
+        font-size: 0.85rem;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -673,6 +970,15 @@ a:hover {
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 1px 0 #0c1a09, 0 0 0.5px 0.5px #0f200b;
     -webkit-box-shadow: 0 0 1px 0 #213a1c, 0 0 0.5px 0.5px #223f1c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(18, 167, 51, 0.25);
+    border-color: rgba(18, 167, 51, 0.3);
 }
 
 .project-card .title {
@@ -791,6 +1097,15 @@ a:hover {
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 1px 0 #0c1a09, 0 0 0.5px 0.5px #0f200b;
     -webkit-box-shadow: 0 0 1px 0 #213a1c, 0 0 0.5px 0.5px #223f1c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(18, 167, 51, 0.2);
+    border-color: rgba(18, 167, 51, 0.3);
 }
 
 .article-card .banner-container {
