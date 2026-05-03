@@ -11,7 +11,7 @@ export const person = {
 
 export const ventures = [
     {
-        name: "Zynotech Intelligence",
+        name: "ZynoTech Intelligence",
         role: "CEO & Founder",
         since: "February 2026",
         type: "Full-time",
@@ -21,7 +21,7 @@ export const ventures = [
         description:
             "A specialized automation intelligence firm transforming Bangladesh's industrial landscape. Delivers advanced automation services across private, government, and military sectors — empowering organizations with intelligent systems to optimize operations and drive national innovation.",
         tags: ["Automation", "AI Systems", "Defense Tech", "Industrial AI"],
-        accent: "#b8ff00",
+        accent: "#7000ff",
     },
     {
         name: "TalkSign",
@@ -34,7 +34,7 @@ export const ventures = [
         description:
             "A bi-directional AI communication ecosystem dissolving barriers between Deaf and hearing communities. Uses state-of-the-art AI and computer vision for real-time sign language translation via a robust API and AR smart glasses application.",
         tags: ["Computer Vision", "AR", "Sign Language AI", "Accessibility Tech"],
-        accent: "#00e5ff",
+        accent: "#FFD700",
     },
 ];
 
