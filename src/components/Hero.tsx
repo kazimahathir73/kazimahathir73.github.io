@@ -21,7 +21,7 @@ export default function Hero() {
                     {/* Left: Text */}
                     <div className="order-2 lg:order-1 lg:w-[45%] space-y-6 sm:space-y-8 animate-fadeInUp">
                         {/* Name */}
-                        <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-7xl font-bangers leading-[1] tracking-widest text-white uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] lg:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10 break-words">
+                        <h1 ref={titleRef} className="text-6xl sm:text-7xl lg:text-7xl font-bangers leading-[1] tracking-widest text-white uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] lg:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10 break-words">
                             KAZI<br />
                             <span className="text-[#b8ff00] comic-text-stroke">MAHATHIR</span><br />
                             RAHMAN
@@ -75,12 +75,20 @@ export default function Hero() {
                     </div>
 
                     {/* Right: Interactive Image */}
-                    <div className="order-1 lg:order-2 relative w-full h-[500px] sm:h-[650px] lg:h-[800px] lg:w-[55%] mx-auto animate-fadeIn flex items-start justify-center z-20 overflow-visible lg:-mt-10" style={{ animationDelay: '0.2s' }}>
+                    <div className="order-1 lg:order-2 relative w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[55%] lg:h-[800px] mx-auto animate-fadeIn flex items-start justify-center z-20 overflow-hidden lg:overflow-visible lg:-mt-10 rounded-full lg:rounded-none border-[6px] border-[#b8ff00] ring-[6px] ring-black lg:border-none lg:ring-0 shadow-[8px_8px_0px_0_rgba(0,0,0,1)] lg:shadow-none bg-[#2A2A2A] lg:bg-transparent" style={{ animationDelay: '0.2s' }}>
                         <HeroImage />
                     </div>
                 </div>
             </div>
 
+            {/* Scroll indicator - Monitor only */}
+            <div 
+                className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce z-10 cursor-pointer group"
+                onClick={() => scrollTo('#ventures')}
+            >
+                <span className="font-bangers text-xl text-white tracking-widest drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] group-hover:text-[#b8ff00] transition-colors">SCROLL DOWN</span>
+                <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-[#b8ff00] drop-shadow-[0_4px_0_rgba(0,0,0,1)]" />
+            </div>
         </section>
     );
 }

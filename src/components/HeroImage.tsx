@@ -22,12 +22,14 @@ export default function HeroImage() {
                 />
 
                 {/* Comic-style Speech Bubble Callout */}
-                <div className="absolute top-[35%] -right-8 group-hover:-right-12 transition-all duration-500 z-30">
-                    <div className="relative bg-[#ff0066] border-4 border-black px-6 py-2 shadow-[6px_6px_0px_0_rgba(0,0,0,1)] transform rotate-2 group-hover:-rotate-2 transition-transform duration-500">
-                        <span className="text-white font-bangers text-2xl tracking-widest uppercase block">REALITY SHIFT!</span>
-                        
-                        {/* Speech Bubble Tail / Arrow pointing to face */}
-                        <div className="absolute top-1/2 -left-4 w-6 h-6 bg-[#ff0066] border-l-4 border-b-4 border-black transform -translate-y-1/2 rotate-45"></div>
+                <div className="absolute top-[18%] right-8 lg:-right-8 transform scale-[0.75] lg:scale-100 z-30 pointer-events-none origin-right">
+                    <div className="relative group/bubble">
+                        <div className="bg-[#ff0066] text-white font-bangers text-sm lg:text-2xl px-2 lg:px-6 py-1 lg:py-2 border-2 lg:border-4 border-black shadow-[2px_2px_0px_0_rgba(0,0,0,1)] lg:shadow-[4px_4px_0px_0_rgba(0,0,0,1)] relative animate-pulse">
+                            REALITY SHIFT!
+                            {/* Speech bubble tail */}
+                            <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[10px] border-r-black lg:border-t-[10px] lg:border-b-[10px] lg:border-r-[15px]" />
+                            <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[8px] border-r-[#ff0066] lg:border-t-[7px] lg:border-b-[7px] lg:border-r-[12px]" />
+                        </div>
                     </div>
                 </div>
             </div>
