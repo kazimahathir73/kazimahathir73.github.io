@@ -61,7 +61,7 @@ export default function News() {
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="text-2xl font-bangers text-black leading-[1.1] uppercase tracking-wide mb-6 group-hover:text-[#ff0066] transition-colors line-clamp-2">
+                                    <h3 className="text-xl sm:text-2xl font-bangers text-black leading-[1.1] uppercase tracking-wide mb-6 group-hover:text-[#ff0066] transition-colors line-clamp-2 break-words">
                                         {item.title}
                                     </h3>
 

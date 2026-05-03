@@ -31,19 +31,19 @@ export default function Research() {
                                 </div>
 
                                 <div className="space-y-4 flex-1">
-                                    <h3 className="text-3xl font-bangers text-black leading-[1.1] uppercase tracking-wide">
+                                    <h3 className="text-2xl sm:text-3xl font-bangers text-black leading-[1.1] uppercase tracking-wide break-words">
                                         {paper.title}
                                     </h3>
-                                    <p className="text-[#ff0066] font-bold tracking-widest text-sm uppercase">
+                                    <p className="text-[#ff0066] font-bold tracking-widest text-xs sm:text-sm uppercase break-words">
                                         {paper.subtitle}
                                     </p>
-                                    <p className="text-black/80 font-medium italic border-l-4 border-black/10 pl-4 leading-relaxed">
+                                    <p className="text-black/80 font-medium italic border-l-4 border-black/10 pl-4 leading-relaxed text-sm sm:text-base break-words">
                                         "{paper.summary}"
                                     </p>
                                 </div>
 
-                                <div className="mt-12 pt-8 border-t-4 border-black/5 flex items-center justify-between">
-                                    <div className="flex gap-3">
+                                <div className="mt-12 pt-8 border-t-4 border-black/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                    <div className="flex flex-wrap gap-3">
                                         {paper.tags.slice(0, 2).map(tag => (
                                             <span key={tag} className="text-[10px] font-black tracking-widest px-3 py-1 bg-black text-white">
                                                 {tag}
@@ -54,7 +54,7 @@ export default function Research() {
                                         href={paper.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="btn-comic-action text-lg py-2 px-6 bg-[#ff0066] hover:bg-black hover:text-[#ff0066] transition-colors"
+                                        className="btn-comic-action text-lg py-2 px-6 bg-[#ff0066] hover:bg-black hover:text-[#ff0066] transition-colors w-full sm:w-auto text-center"
                                     >
                                         READ PAPER
                                     </a>

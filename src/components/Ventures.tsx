@@ -44,10 +44,10 @@ export default function Ventures() {
                                             />
                                         </div>
                                         <div>
-                                            <h3 className="text-4xl sm:text-5xl font-bangers text-black tracking-wider uppercase mb-1">
+                                            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bangers text-black tracking-wider uppercase mb-1 break-words">
                                                 {venture.name}
                                             </h3>
-                                            <div className="flex items-center gap-4 text-xs font-bold tracking-widest text-black/60 uppercase">
+                                            <div className="flex flex-wrap items-center gap-4 text-[10px] sm:text-xs font-bold tracking-widest text-black/60 uppercase">
                                                 <span className="flex items-center gap-2">
                                                     <Calendar size={14} className="text-black" /> {venture.since}
                                                 </span>

@@ -19,28 +19,28 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full py-16">
                 <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
                     {/* Left: Text */}
-                    <div className="space-y-8 animate-fadeInUp">
+                    <div className="order-2 lg:order-1 space-y-6 sm:space-y-8 animate-fadeInUp">
                         {/* Name */}
-                        <h1 ref={titleRef} className="text-6xl sm:text-7xl lg:text-8xl font-bangers leading-[0.9] tracking-widest text-white uppercase drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10">
+                        <h1 ref={titleRef} className="text-5xl sm:text-6xl lg:text-8xl font-bangers leading-[1] tracking-widest text-white uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] lg:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10 break-words">
                             KAZI<br />
                             <span className="text-[#b8ff00] comic-text-stroke">MAHATHIR</span><br />
                             RAHMAN
                         </h1>
 
                         {/* Title Box */}
-                        <div className="bg-white border-4 border-black p-4 inline-block transform rotate-1 shadow-[6px_6px_0px_0_rgba(184,255,0,1)]">
-                            <p className="text-black text-lg sm:text-xl font-bold tracking-widest uppercase">
+                        <div className="bg-white border-4 border-black p-3 sm:p-4 inline-block transform rotate-1 shadow-[4px_4px_0px_0_rgba(184,255,0,1)] lg:shadow-[6px_6px_0px_0_rgba(184,255,0,1)] max-w-full">
+                            <p className="text-black text-sm sm:text-base lg:text-xl font-bold tracking-widest uppercase break-words">
                                 Entrepreneur · AI Researcher · Tech Founder
                             </p>
                         </div>
 
                         {/* Description */}
-                        <p className="text-white text-xl leading-relaxed max-w-lg font-medium hand-marker">
+                        <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed max-w-lg font-medium hand-marker break-words">
                             // CEO of <span className="text-[#b8ff00] font-black underline decoration-4 underline-offset-4">Zynotech Intelligence</span> & CTO of <span className="text-[#00e5ff] font-black underline decoration-4 underline-offset-4">TalkSign</span>. Building AI-driven futures from Dhaka to the world.
                         </p>
 
                         {/* CTAs */}
-                        <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-2 sm:pt-4">
                             <a
                                 href="https://www.crunchbase.com/person/kazi-mahathir-rahman"
                                 target="_blank"
@@ -75,14 +75,14 @@ export default function Hero() {
                     </div>
 
                     {/* Right: 3D Model */}
-                    <div className="relative w-full h-[600px] lg:h-[800px] animate-fadeIn flex items-center justify-center z-20" style={{ animationDelay: '0.2s' }}>
+                    <div className="order-1 lg:order-2 relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-full lg:h-[800px] mx-auto animate-fadeIn flex items-center justify-center z-20 rounded-full lg:rounded-none overflow-hidden border-[6px] border-[#b8ff00] ring-[6px] ring-black lg:border-none lg:ring-0 shadow-[8px_8px_0px_0_rgba(0,0,0,1)] lg:shadow-none bg-[#c0c4cc] lg:bg-transparent" style={{ animationDelay: '0.2s' }}>
                         <Model3D />
                     </div>
                 </div>
             </div>
 
-            {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce z-10">
+            {/* Scroll indicator - hidden on mobile to avoid overlap */}
+            <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-4 animate-bounce z-10">
                 <span className="font-bangers text-2xl text-white tracking-widest drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">SCROLL DOWN</span>
                 <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-[#b8ff00] drop-shadow-[0_4px_0_rgba(0,0,0,1)]" />
             </div>

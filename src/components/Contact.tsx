@@ -14,11 +14,28 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSending(true);
-        // Simulate send delay
-        await new Promise(r => setTimeout(r, 1200));
-        setSending(false);
-        setSent(true);
-        setForm({ name: '', email: '', subject: '', message: '' });
+        
+        try {
+            const response = await fetch("https://formspree.io/f/xeenedep", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(form)
+            });
+
+            if (response.ok) {
+                setSent(true);
+                setForm({ name: '', email: '', subject: '', message: '' });
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            alert("Network error. Please try again.");
+        } finally {
+            setSending(false);
+        }
     };
 
     return (
@@ -49,7 +66,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-bangers text-xl text-black/50 tracking-wider">EMAIL</div>
-                                    <div className="text-lg font-bold text-black">{person.email}</div>
+                                    <div className="text-base sm:text-lg font-bold text-black break-all">{person.email}</div>
                                 </div>
                                 <ArrowRight size={20} className="ml-auto text-black transform group-hover:translate-x-2 transition-transform" />
                             </a>
@@ -60,7 +77,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-bangers text-xl text-black/50 tracking-wider">LOCATION</div>
-                                    <div className="text-lg font-bold text-black">{person.location}</div>
+                                    <div className="text-base sm:text-lg font-bold text-black break-words">{person.location}</div>
                                 </div>
                             </div>
 
@@ -75,7 +92,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-bangers text-xl text-black/50 tracking-wider">GITHUB</div>
-                                    <div className="text-lg font-bold text-black">kazimahathir73</div>
+                                    <div className="text-base sm:text-lg font-bold text-black break-all">kazimahathir73</div>
                                 </div>
                                 <ArrowRight size={20} className="ml-auto text-black transform group-hover:translate-x-2 transition-transform" />
                             </a>

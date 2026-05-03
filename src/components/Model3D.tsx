@@ -1,4 +1,4 @@
-import { Suspense, useRef, useMemo, useEffect } from 'react';
+import { Suspense, useRef, useMemo, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { 
     useGLTF, 
@@ -74,12 +74,12 @@ function Model({ url }: { url: string }) {
                     }
                     
                     if (mesh.name.toLowerCase().includes('skin') || mesh.name.toLowerCase().includes('head')) {
-                        // Matte but bright skin
-                        mesh.material.roughness = 0.5;
+                        // Natural skin texture - rougher to prevent plastic shine
+                        mesh.material.roughness = 0.65;
                         mesh.material.metalness = 0;
-                        // Brighter emissive to counter the faded look
-                        mesh.material.emissive = new THREE.Color("#221100");
-                        mesh.material.emissiveIntensity = 0.2;
+                        // Subsurface scattering simulation (warmer skin tone)
+                        mesh.material.emissive = new THREE.Color("#2a1205");
+                        mesh.material.emissiveIntensity = 0.1;
                     }
                     if (mesh.name.toLowerCase().includes('hair')) {
                         // Deep black matte hair
@@ -99,7 +99,7 @@ function Model({ url }: { url: string }) {
     return (
         <primitive 
             object={scene} 
-            // Nudged down slightly as requested (0.05 decrease from -2.85 to -2.90)
+            // Slid down based on zoom to keep head-to-chest framing
             position={[0, -2.90, 0]} 
             scale={1.85} 
             rotation={[0, 0.4, 0]} 
@@ -108,8 +108,18 @@ function Model({ url }: { url: string }) {
 }
 
 export default function Model3D() {
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
-        <div className="w-full h-full min-h-[400px] lg:min-h-[600px] relative overflow-hidden bg-transparent">
+        <div className="w-full h-full relative overflow-hidden bg-transparent">
             <Canvas 
                 shadows 
                 onCreated={({ gl }) => {
@@ -118,15 +128,19 @@ export default function Model3D() {
                 gl={{ 
                     antialias: true, 
                     toneMapping: THREE.ACESFilmicToneMapping,
-                    toneMappingExposure: 1.2,
+                    toneMappingExposure: 0.85,
                     powerPreference: "high-performance",
                     alpha: true,
                     preserveDrawingBuffer: true
                 }}
                 dpr={[1, 2]}
             >
-                {/* Much more zoom (fov 27 -> 20) */}
-                <PerspectiveCamera makeDefault position={[0, 2.3, 2.35]} fov={20} />
+                {/* Super Zoom for Mobile: FOV 16 to cover only chest and face */}
+                <PerspectiveCamera 
+                    makeDefault 
+                    position={typeof window !== 'undefined' && window.innerWidth < 768 ? [0, 2.55, 3.2] : [0, 2.3, 2.35]} 
+                    fov={typeof window !== 'undefined' && window.innerWidth < 768 ? 16 : 20} 
+                />
                 
                 <Suspense fallback={<Loader />}>
                     <Model url="/assets/me.glb" />
@@ -142,34 +156,39 @@ export default function Model3D() {
                         makeDefault
                     />
 
-                    {/* BRIGHT STUDIO LIGHTING SETUP */}
-                    <Environment preset="apartment" intensity={1.5} />
+                    {/* CINEMATIC DRAMATIC LIGHTING */}
+                    <Environment preset="city" intensity={0.2} />
                     
-                    <ambientLight intensity={0.8} />
+                    <ambientLight intensity={0.2} color="#ffd2a6" />
                     
-                    {/* Powerful Key Light for high-impact professional look */}
-                    <spotLight 
-                        position={[6, 5, 5]} 
-                        angle={0.4} 
-                        penumbra={1} 
-                        intensity={4.0} 
-                        color="#ffffff" 
-                        castShadow 
-                        shadow-mapSize={[2048, 2048]}
-                    />
-                    
-                    {/* Balanced Fill Light */}
+                    {/* Strong Key Light from the LEFT */}
                     <directionalLight 
-                        position={[-5, 2, 2]} 
-                        intensity={1.2} 
+                        position={[-6, 2, 4]} 
+                        intensity={3.0} 
+                        color="#ffcc99" 
+                        castShadow 
+                        shadow-mapSize={[1024, 1024]}
+                    />
+                    
+                    {/* Weak Fill Light from the RIGHT to allow shadows */}
+                    <directionalLight 
+                        position={[6, 0, 2]} 
+                        intensity={0.4} 
                         color="#ffffff" 
                     />
                     
-                    {/* Sharp Rim Light */}
+                    {/* Rim Light - Highlighting the silhouette */}
                     <pointLight 
-                        position={[0, 2, -5]} 
+                        position={[0, 5, -5]} 
                         intensity={2.0} 
-                        color="#ffffff" 
+                        color="#fff" 
+                    />
+                    
+                    {/* Bounce Light from below to soften jawline */}
+                    <pointLight 
+                        position={[0, -2, 2]} 
+                        intensity={0.8} 
+                        color="#ffcc99" 
                     />
 
                     <ContactShadows 

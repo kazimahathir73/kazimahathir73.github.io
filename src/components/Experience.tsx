@@ -35,8 +35,8 @@ export default function Experience() {
                                     <div className="flex-1 p-8">
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
                                             <div>
-                                                <h4 className="text-3xl font-bangers text-black uppercase tracking-wide">{exp.role}</h4>
-                                                <p className="text-[#b8ff00] font-black tracking-widest text-xs bg-black px-2 py-1 inline-block mt-2">
+                                                <h4 className="text-2xl sm:text-3xl font-bangers text-black uppercase tracking-wide break-words">{exp.role}</h4>
+                                                <p className="text-[#b8ff00] font-black tracking-widest text-[10px] sm:text-xs bg-black px-2 py-1 inline-block mt-2 break-words max-w-full">
                                                     {exp.company}
                                                 </p>
                                             </div>
@@ -57,15 +57,15 @@ export default function Experience() {
                             <GraduationCap className="text-[#b8ff00] w-10 h-10" />
                             <h3 className="font-bangers text-4xl text-white tracking-widest">EDUCATION</h3>
                         </div>
-                        <div className="exp-card p-10 space-y-6">
+                        <div className="exp-card p-6 sm:p-10 space-y-6">
                             <div>
-                                <h4 className="text-3xl font-bangers text-black uppercase tracking-wide leading-none">BSc in Computer Science</h4>
-                                <p className="text-black/50 font-bold tracking-widest text-xs mt-2 italic">Daffodil International University</p>
+                                <h4 className="text-2xl sm:text-3xl font-bangers text-black uppercase tracking-wide leading-none break-words">BSc in Computer Science</h4>
+                                <p className="text-black/50 font-bold tracking-widest text-[10px] sm:text-xs mt-2 italic break-words">Brac University</p>
                             </div>
-                            <p className="text-black/70 font-medium">Focused on Artificial Intelligence, Software Engineering, and Human-Computer Interaction.</p>
+                            <p className="text-black/70 font-medium text-sm sm:text-base">Focused on Artificial Intelligence, Software Engineering, and Human-Computer Interaction.</p>
                             <div className="pt-6 border-t-4 border-black/5 flex items-center gap-4">
                                 <span className="w-12 h-1 bg-black" />
-                                <span className="font-bangers text-2xl text-black">CLASS OF 2024</span>
+                                <span className="font-bangers text-2xl text-black">CLASS OF 2025</span>
                             </div>
                         </div>
                     </div>
