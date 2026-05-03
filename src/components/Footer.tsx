@@ -1,5 +1,5 @@
 import { person } from '../data';
-import { Github, Mail, ExternalLink } from 'lucide-react';
+import { Github, Mail, ExternalLink, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -62,14 +62,26 @@ export default function Footer() {
                                 </a>
                             </div>
 
-                            <div className="flex items-center gap-6 mt-8 border-t-4 border-black/10 pt-6">
+                            <div className="flex flex-wrap items-center gap-4 mt-8 border-t-4 border-black/10 pt-6">
                                 <a href={person.github} target="_blank" rel="noopener noreferrer"
-                                    className="w-12 h-12 bg-black flex items-center justify-center transform hover:scale-110 hover:-rotate-6 transition-all group">
-                                    <Github size={24} className="text-[#b8ff00] group-hover:text-[#ff0066]" />
+                                    className="w-10 h-10 bg-black flex items-center justify-center transform hover:scale-110 hover:-rotate-6 transition-all group">
+                                    <Github size={20} className="text-[#b8ff00] group-hover:text-[#ff0066]" />
+                                </a>
+                                <a href={person.linkedin} target="_blank" rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-black flex items-center justify-center transform hover:scale-110 hover:rotate-6 transition-all group">
+                                    <Linkedin size={20} className="text-[#b8ff00] group-hover:text-[#00e5ff]" />
+                                </a>
+                                <a href={person.facebook} target="_blank" rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-black flex items-center justify-center transform hover:scale-110 hover:-rotate-6 transition-all group">
+                                    <Facebook size={20} className="text-[#b8ff00] group-hover:text-[#ff0066]" />
+                                </a>
+                                <a href={person.instagram} target="_blank" rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-black flex items-center justify-center transform hover:scale-110 hover:rotate-6 transition-all group">
+                                    <Instagram size={20} className="text-[#b8ff00] group-hover:text-[#00e5ff]" />
                                 </a>
                                 <a href={`mailto:${person.email}`}
-                                    className="w-12 h-12 bg-black flex items-center justify-center transform hover:scale-110 hover:rotate-6 transition-all group">
-                                    <Mail size={24} className="text-[#b8ff00] group-hover:text-[#00e5ff]" />
+                                    className="w-10 h-10 bg-black flex items-center justify-center transform hover:scale-110 hover:-rotate-6 transition-all group">
+                                    <Mail size={20} className="text-[#b8ff00] group-hover:text-[#ff0066]" />
                                 </a>
                             </div>
                         </div>

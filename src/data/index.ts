@@ -7,6 +7,9 @@ export const person = {
     photo: "https://kazimahathir73.github.io/assets/images/my_img2.jpg",
 
     location: "Dhaka, Bangladesh",
+    linkedin: "https://www.linkedin.com/in/kazi-mahathir-rahman-121032210/",
+    facebook: "https://www.facebook.com/kazimahathir.rahman/",
+    instagram: "https://www.instagram.com/_kazi.mahathir_/",
 };
 
 export const ventures = [

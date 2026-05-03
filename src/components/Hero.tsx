@@ -16,12 +16,12 @@ export default function Hero() {
             id="home"
             className="relative flex items-start justify-center overflow-visible pt-20"
         >
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-16 pb-0 overflow-visible">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-24 pb-0 overflow-visible">
                 <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
                     {/* Left: Text */}
                     <div className="order-2 lg:order-1 lg:w-[45%] space-y-6 sm:space-y-8 animate-fadeInUp">
                         {/* Name */}
-                        <h1 ref={titleRef} className="text-6xl sm:text-7xl lg:text-7xl font-bangers leading-[1] tracking-widest text-white uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] lg:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10 break-words">
+                        <h1 ref={titleRef} className="text-6xl sm:text-7xl lg:text-8xl font-bangers leading-[0.9] lg:leading-[1] tracking-widest text-white uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] lg:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] relative z-10 break-words">
                             KAZI<br />
                             <span className="text-[#b8ff00] comic-text-stroke">MAHATHIR</span><br />
                             RAHMAN
@@ -57,21 +57,6 @@ export default function Hero() {
                             </button>
                         </div>
 
-                        {/* Social Links */}
-                        <div className="flex items-center gap-6 pt-6">
-                            <a href={person.github} target="_blank" rel="noopener noreferrer"
-                                className="w-12 h-12 bg-white border-4 border-black flex items-center justify-center transform hover:scale-110 hover:-rotate-6 transition-all shadow-[4px_4px_0px_0_rgba(0,0,0,1)]">
-                                <Github size={24} className="text-black" />
-                            </a>
-                            <a href={`mailto:${person.email}`}
-                                className="w-12 h-12 bg-white border-4 border-black flex items-center justify-center transform hover:scale-110 hover:rotate-6 transition-all shadow-[4px_4px_0px_0_rgba(0,0,0,1)]">
-                                <Mail size={24} className="text-black" />
-                            </a>
-                            <div className="flex items-center gap-2 bg-white border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0_rgba(0,0,0,1)] font-bangers text-xl text-black">
-                                <MapPin size={20} className="text-[#ff0066]" />
-                                DHAKA, BD
-                            </div>
-                        </div>
                     </div>
 
                     {/* Right: Interactive Image */}
