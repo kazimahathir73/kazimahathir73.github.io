@@ -3,7 +3,7 @@ import { ventures } from '../data';
 
 export default function Ventures() {
     return (
-        <section id="ventures" className="relative py-32 bg-[#2A2A2A] overflow-hidden">
+        <section id="ventures" className="relative pt-24 pb-24 bg-[#2A2A2A] overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
                 {/* Section header */}
                 <div className="mb-20">
