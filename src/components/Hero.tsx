@@ -36,7 +36,7 @@ export default function Hero() {
 
                         {/* Description */}
                         <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed max-w-lg font-medium hand-marker break-words">
-                            // CEO of <span className="text-[#b8ff00] font-black underline decoration-4 underline-offset-4">Zynotech Intelligence</span> & CTO of <span className="text-[#00e5ff] font-black underline decoration-4 underline-offset-4">TalkSign</span>. Building AI-driven futures from Dhaka to the world.
+                            // CEO of <span className="text-[#00e5ff] font-black underline decoration-4 underline-offset-4">ZynoTech Intelligence</span> & CTO of <span className="text-[#00e5ff] font-black underline decoration-4 underline-offset-4">TalkSign</span>. Building AI-driven futures from Dhaka to the world.
                         </p>
 
                         {/* CTAs */}
