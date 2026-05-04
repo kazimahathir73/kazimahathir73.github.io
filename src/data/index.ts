@@ -9,7 +9,8 @@ export const person = {
     location: "Dhaka, Bangladesh",
     linkedin: "https://www.linkedin.com/in/kazi-mahathir-rahman-121032210/",
     facebook: "https://www.facebook.com/kazimahathir.rahman/",
-    instagram: "https://www.instagram.com/_kazi.mahathir_/",
+    researchgate: "https://www.researchgate.net/profile/Kazi-Rahman-80",
+    googlescholar: "https://scholar.google.com/citations?user=st8gnwIAAAAJ&hl=id",
 };
 
 export const ventures = [

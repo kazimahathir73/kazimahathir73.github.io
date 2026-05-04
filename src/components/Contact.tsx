@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Mail, MapPin, Github, ArrowRight, CheckCircle } from 'lucide-react';
+import { Send, Mail, MapPin, ArrowRight, CheckCircle, Linkedin } from 'lucide-react';
 import { person } from '../data';
 
 export default function Contact() {
@@ -82,17 +82,17 @@ export default function Contact() {
                             </div>
 
                             <a
-                                href={person.github}
+                                href={person.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="comic-panel group flex items-center gap-6 p-4 bg-white"
                             >
-                                <div className="w-12 h-12 bg-[#ff0066] border-2 border-black flex items-center justify-center transform -rotate-3 group-hover:rotate-0 transition-transform">
-                                    <Github size={24} className="text-black" />
+                                <div className="w-12 h-12 bg-[#0077b5] border-2 border-black flex items-center justify-center transform -rotate-3 group-hover:rotate-0 transition-transform">
+                                    <Linkedin size={24} className="text-white" />
                                 </div>
                                 <div>
-                                    <div className="font-bangers text-xl text-black/50 tracking-wider">GITHUB</div>
-                                    <div className="text-base sm:text-lg font-bold text-black break-all">kazimahathir73</div>
+                                    <div className="font-bangers text-xl text-black/50 tracking-wider">LINKEDIN</div>
+                                    <div className="text-base sm:text-lg font-bold text-black break-all">kazi-mahathir-rahman-121032210</div>
                                 </div>
                                 <ArrowRight size={20} className="ml-auto text-black transform group-hover:translate-x-2 transition-transform" />
                             </a>
