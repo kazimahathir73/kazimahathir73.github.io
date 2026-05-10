@@ -4,7 +4,7 @@ export const person = {
     tagline: "Building the future from Dhaka to the world.",
     email: "mahathirmahim73@gmail.com",
     github: "https://github.com/kazimahathir73",
-    photo: "https://kazimahathir73.github.io/assets/images/my_img2.jpg",
+    photo: "https://kazimahathir73.github.io/assets/me_real.png",
 
     location: "Dhaka, Bangladesh",
     linkedin: "https://www.linkedin.com/in/kazi-mahathir-rahman-121032210/",
