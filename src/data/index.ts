@@ -120,9 +120,10 @@ export const experience = [
 ];
 
 export const skills = [
-    "AI Research", "Computer Vision", "NLP", "LLMs", "Reinforcement Learning", 
-    "PyTorch", "TensorFlow", "Hugging Face", "Full-Stack Development", 
-    "React", "Next.js", "Django", "MongoDB", "MySQL", 
+    "AI Research", "AGI", "Large Language Models", "Generative AI", "Reinforcement Learning", 
+    "Computer Vision", "NLP", "PyTorch", "TensorFlow", "Hugging Face", 
+    "Full-Stack Development", "Back-End Engineering", "System Architect", "System Analysis",
+    "Security Maintenance", "React", "Next.js", "Django", "MongoDB", "MySQL", 
     "Cyber Security", "Network Engineering", "MLOps", "AI Automation", 
     "Python", "JavaScript", "C++", "C"
 ];
