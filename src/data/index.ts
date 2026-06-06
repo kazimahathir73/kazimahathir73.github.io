@@ -50,6 +50,7 @@ export const research = [
             "Combines reinforcement learning with diffusion models to achieve dramatically improved text rendering in AI-generated images. Achieves 45.67x faster inference than TextDiffuser-2 while maintaining superior quality.",
         tags: ["Diffusion Models", "Reinforcement Learning", "Text-Image Generation", "NLP"],
         doi: "https://doi.org/10.48550/arXiv.2505.19291",
+        link: "https://doi.org/10.48550/arXiv.2505.19291",
         year: "2025",
         speedup: "45.67x faster",
     },
@@ -60,8 +61,18 @@ export const research = [
             "A complete pipeline converting spoken English audio to 3D American Sign Language animations. Leverages OpenAI Whisper for speech recognition, MarianMT for language translation, and a custom 3D animation synthesis engine.",
         tags: ["ASL", "3D Animation", "Whisper", "Computer Vision", "NLP"],
         doi: "https://doi.org/10.48550/arXiv.2507.06530",
+        link: "https://doi.org/10.48550/arXiv.2507.06530",
         year: "2025",
         speedup: null,
+    },
+    {
+        title: "OSCToM",
+        subtitle: "RL-Guided Adversarial Generation for High-Order Theory of Mind",
+        summary: "Presents OSCToM (Observer-Self Conflict Theory of Mind), an approach for modeling nested belief conflicts in LLM-based ToM tasks. Uses reinforcement learning and surrogate models to generate adversarial datasets, achieving 76% accuracy on FANToM.",
+        tags: ["Theory of Mind", "LLMs", "Reinforcement Learning", "NLP"],
+        doi: "https://arxiv.org/abs/2605.20423v1",
+        link: "https://arxiv.org/abs/2605.20423v1",
+        year: "2026",
     },
 ];
 
